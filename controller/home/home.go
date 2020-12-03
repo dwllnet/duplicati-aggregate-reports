@@ -22,6 +22,5 @@ func Index(w http.ResponseWriter, r *http.Request) {
 	if c.Sess.Values["id"] != nil {
 		v.Vars["first_name"] = c.Sess.Values["first_name"]
 	}
-
 	v.Render(w, r)
 }
