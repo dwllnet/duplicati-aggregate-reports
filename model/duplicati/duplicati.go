@@ -4,7 +4,6 @@ package duplicati
 
 import (
 	"database/sql"
-	"fmt"
 	"time"
 
 	"github.com/go-sql-driver/mysql"
@@ -134,7 +133,7 @@ type JsonReport struct {
 	LogLines []interface{} `json:"LogLines"`
 }
 
-// Item defines the model.
+// DB Report defines the model.
 type DBReport struct {
 	ID                                                   uint32         `db:"id"`
 	Server                                               string         `db:"Server"`
@@ -252,7 +251,9 @@ type Connection interface {
 	Select(dest interface{}, query string, args ...interface{}) error
 }
 
-func AddReport(db Connection) (sql.Result, error) {
+func AddReport(db Connection, report JsonReport) bool {
 
-	return result, err
+	status := true
+
+	return status
 }
