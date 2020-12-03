@@ -17,5 +17,6 @@ func Load() {
 func Index(w http.ResponseWriter, r *http.Request) {
 	c := flight.Context(w, r)
 
-	c.View.New("about/index").Render(w, r)
+	//c.View.New("about/index").Render(w, r)
+	c.View.New("clientstatus/index").Render(w, r)
 }
