@@ -2,13 +2,12 @@
 package boot
 
 import (
-	"encoding/base64"
-	"log"
-	"net/http"
-
 	"../../controller/status"
 	"../../lib/flight"
+	"encoding/base64"
 	"github.com/gorilla/csrf"
+	"log"
+	"net/http"
 )
 
 // setUpCSRF sets up the CSRF protection.
