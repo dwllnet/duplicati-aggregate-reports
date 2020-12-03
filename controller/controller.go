@@ -3,6 +3,7 @@ package controller
 
 import (
 	"./about"
+	"./clientstatus"
 	"./debug"
 	"./home"
 	"./login"
@@ -20,4 +21,5 @@ func LoadRoutes() {
 	home.Load()
 	static.Load()
 	status.Load()
+	clientstatus.Load()
 }
