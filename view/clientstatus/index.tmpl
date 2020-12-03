@@ -1,0 +1,21 @@
+{{define "title"}}Duplicati Aggregate Reports{{end}}
+{{define "head"}}{{end}}
+{{define "content"}}
+    {{if eq .AuthLevel "auth"}}
+
+        <div class="page-header">
+            <h1>Hello, nothing to see here.</h1>
+        </div>
+        <p>You have arrived at the wrong location.</p>
+
+    {{else}}
+
+        <div class="page-header">
+            <h1>{{template "title" .}}</h1>
+        </div>
+        <p>Thank you server {{.Server}} for your data.</p>
+
+    {{end}}
+    {{template "footer" .}}
+{{end}}
+{{define "foot"}}{{end}}
