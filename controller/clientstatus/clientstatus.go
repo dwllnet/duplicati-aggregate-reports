@@ -2,7 +2,7 @@ package clientstatus
 
 import (
 	"../../lib/flight"
-	"../../model/duplicati"
+	"../../model/duplicati/storage"
 	"encoding/json"
 	"github.com/blue-jay/core/router"
 	"github.com/golang/gddo/httputil/header"
@@ -44,7 +44,7 @@ func RecordClientStatus(w http.ResponseWriter, r *http.Request) {
 			r.Body = http.MaxBytesReader(w, r.Body, 1048576)
 			reportJSON := json.NewDecoder(r.Body)
 			reportJSON.DisallowUnknownFields()
-			var report duplicati.JsonReport
+			var report storage.JsonReport
 
 			err := reportJSON.Decode(&report)
 			if err != nil {

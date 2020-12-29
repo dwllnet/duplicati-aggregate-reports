@@ -3,6 +3,8 @@ env.json
 
 # IDE #
 .idea
+src
+pkg
 
 # Compiled source #
 ###################

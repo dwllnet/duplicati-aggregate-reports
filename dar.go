@@ -1,14 +1,12 @@
 package main
 
 import (
-	"log"
-	"runtime"
-
 	"./lib/boot"
 	"./lib/env"
-
 	"github.com/blue-jay/core/router"
 	"github.com/blue-jay/core/server"
+	"log"
+	"runtime"
 )
 
 // init sets runtime settings.

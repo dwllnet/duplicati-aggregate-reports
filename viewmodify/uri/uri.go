@@ -2,10 +2,9 @@
 package uri
 
 import (
+	"github.com/blue-jay/core/view"
 	"net/http"
 	"path"
-
-	"github.com/blue-jay/core/view"
 )
 
 // Modify sets BaseURI, CurrentURI, ParentURI, and the GrandparentURI
