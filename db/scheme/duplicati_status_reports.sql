@@ -5,6 +5,8 @@
 CREATE TABLE `duplicati_status_reports` (
   `id` int(10) NOT NULL,
   `server` varchar(255) NOT NULL,
+  `operation_name` varchar(255) NOT NULL,
+  `backup_name` varchar(255) NOT NULL,
   `deleted_files` int(10) NOT NULL,
   `deleted_folders` int(10) NOT NULL,
   `modified_files` int(10) NOT NULL,
