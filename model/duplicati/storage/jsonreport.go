@@ -4,24 +4,24 @@ import "time"
 
 type JsonReport struct {
 	Data struct {
-		DeletedFiles         int         `json:"DeletedFiles"`
-		DeletedFolders       int         `json:"DeletedFolders"`
-		ModifiedFiles        int         `json:"ModifiedFiles"`
-		ExaminedFiles        int         `json:"ExaminedFiles"`
-		OpenedFiles          int         `json:"OpenedFiles"`
-		AddedFiles           int         `json:"AddedFiles"`
-		SizeOfModifiedFiles  int         `json:"SizeOfModifiedFiles"`
-		SizeOfAddedFiles     int         `json:"SizeOfAddedFiles"`
-		SizeOfExaminedFiles  int         `json:"SizeOfExaminedFiles"`
-		SizeOfOpenedFiles    int         `json:"SizeOfOpenedFiles"`
-		NotProcessedFiles    int         `json:"NotProcessedFiles"`
-		AddedFolders         int         `json:"AddedFolders"`
-		TooLargeFiles        int         `json:"TooLargeFiles"`
-		FilesWithError       int         `json:"FilesWithError"`
-		ModifiedFolders      int         `json:"ModifiedFolders"`
-		ModifiedSymlinks     int         `json:"ModifiedSymlinks"`
-		AddedSymlinks        int         `json:"AddedSymlinks"`
-		DeletedSymlinks      int         `json:"DeletedSymlinks"`
+		DeletedFiles         uint32      `json:"DeletedFiles"`
+		DeletedFolders       uint32      `json:"DeletedFolders"`
+		ModifiedFiles        uint32      `json:"ModifiedFiles"`
+		ExaminedFiles        uint32      `json:"ExaminedFiles"`
+		OpenedFiles          uint32      `json:"OpenedFiles"`
+		AddedFiles           uint32      `json:"AddedFiles"`
+		SizeOfModifiedFiles  uint32      `json:"SizeOfModifiedFiles"`
+		SizeOfAddedFiles     uint32      `json:"SizeOfAddedFiles"`
+		SizeOfExaminedFiles  uint32      `json:"SizeOfExaminedFiles"`
+		SizeOfOpenedFiles    uint32      `json:"SizeOfOpenedFiles"`
+		NotProcessedFiles    uint32      `json:"NotProcessedFiles"`
+		AddedFolders         uint32      `json:"AddedFolders"`
+		TooLargeFiles        uint32      `json:"TooLargeFiles"`
+		FilesWithError       uint32      `json:"FilesWithError"`
+		ModifiedFolders      uint32      `json:"ModifiedFolders"`
+		ModifiedSymlinks     uint32      `json:"ModifiedSymlinks"`
+		AddedSymlinks        uint32      `json:"AddedSymlinks"`
+		DeletedSymlinks      uint32      `json:"DeletedSymlinks"`
 		PartialBackup        bool        `json:"PartialBackup"`
 		Dryrun               bool        `json:"Dryrun"`
 		MainOperation        string      `json:"MainOperation"`

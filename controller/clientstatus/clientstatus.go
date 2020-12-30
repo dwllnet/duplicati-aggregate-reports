@@ -2,11 +2,11 @@ package clientstatus
 
 import (
 	"../../lib/flight"
+	"../../model/duplicati"
 	"../../model/duplicati/storage"
 	"encoding/json"
 	"github.com/blue-jay/core/router"
 	"github.com/golang/gddo/httputil/header"
-	"log"
 	"net/http"
 )
 
@@ -51,7 +51,18 @@ func RecordClientStatus(w http.ResponseWriter, r *http.Request) {
 				c.FlashWarning("JSON Decode Error")
 			}
 
-			log.Println(report)
+			//log.Println(report)
+
+			summaryReport := duplicati.CreateSummary(duplicatiClient, report)
+			_, err = duplicati.Create(c.DB, summaryReport)
+
+			if err != nil {
+				c.FlashErrorGeneric(err)
+				//log.Println(err)
+			} else {
+				c.FlashSuccess("Data stored: ")
+				return
+			}
 		}
 	} else {
 		msg := "Conten-Type is empty."
