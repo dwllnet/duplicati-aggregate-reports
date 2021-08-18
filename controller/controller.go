@@ -8,6 +8,7 @@ import (
 	"./home"
 	"./login"
 	"./register"
+	"./reports"
 	"./static"
 	"./status"
 )
@@ -22,4 +23,5 @@ func LoadRoutes() {
 	static.Load()
 	status.Load()
 	clientstatus.Load()
+	reports.Load()
 }
